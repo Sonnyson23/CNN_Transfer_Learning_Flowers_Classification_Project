@@ -100,6 +100,11 @@ if st.button("Tahmin Et"):
     if 'image' in locals():
         image = image.resize((224, 224))
         image = tf.keras.preprocessing.image.img_to_array(image)
+        
+        # Gri tonlamalı resim kontrolü ve RGB'ye dönüştürme
+        if image.shape[-1] != 3:
+            image = np.stack([image]*3, axis=-1)
+        
         image = image / 255.0
         image = np.expand_dims(image, axis=0)
 
@@ -110,6 +115,7 @@ if st.button("Tahmin Et"):
         class_names = ["Daisy", "Dandelion", "Rose", "Sunflower", "Tulip"]  # Modelin tahmin sınıfları
         predicted_class = class_names[np.argmax(prediction)]
         confidence = np.max(prediction)
+
         
         st.markdown(f'<p style="background-color: #8a4baf; color: white; font-size: 20px; padding: 10px; border-radius: 5px; text-align: center; box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);">🌷Model Tahmini🌷</p>', unsafe_allow_html=True)
 
