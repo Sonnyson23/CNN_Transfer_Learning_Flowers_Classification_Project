@@ -44,9 +44,10 @@ st.sidebar.title("Team Members")
 
 # Takım üyelerini listelemek için bir liste kullanabilirsiniz
 team_members = [
-    {"name": "Adem SONUVAR", "github": "soonyson23", "email": "ademsonuvar@gmail.com"},
-    {"name": "İsim2", "github": "GitHub2", "email": "email2@example.com"},
-    {"name": "İsim3", "github": "GitHub3", "email": "email3@example.com"},
+    {"name": "Adem SONUVAR", "github": "sonyson23", "email": "ademsonuvar@gmail.com"},
+    {"name": "Ismet GOCER", "github": "ismetgocer1", "email": "ismetgocer@gmail.com"},
+    {"name": "Mert URPER", "github": "MertUrper", "email": "mert.urperr@gmail.com"},
+    {"name": "Filiz ESENKAYA", "github": "Filiz5", "email": "esenkayafiliz@gmail.com"},
     # Ek takım üyelerini buraya ekleyebilirsiniz
 ]
 
